@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+
+:root{
+    --blue-color:#2f9bdb;
+}
+body{
+     /* background-color: rgb(138, 165, 165); */
+     color: black;
+     height: 200vh;
+}
+
+/* navbar */
+/* nav{
+    position: fixed;
+} */
+
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 2rem;
+    /* border: 2px solid rebeccapurple; */
+    color: white;
+    height: 55px;
+    font-family: 'Roboto Mono', monospace;
+    
+    
+}
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.18s ease-in ;
+}
+
+.banner{
+    background: url('../data/loclaImage/home_banner_road.jpg');
+    min-height: 340px;
+}
+.logo{
+      /* border: 2px solid darkblue; */
+      width: 150px !important;
+      
+      padding: 5px 0;
+      margin-right: 2rem;
+}
+.logo>img{
+    width: 140px;
+    height: 3rem;
+}
+.links{
+    display: flex;
+    /* width: 50rem; */
+    /* border: 2px solid red; */
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+    margin: 0 1rem;
+}
+li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.search-hide{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    /* display: none; */
+}
+
+/* .search-top{
+    width: 25rem;
+} */
+.signin-small-btn{
+    display: none;
+}
+.content{
+    width: 100%;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+        top: 120px;
+}
+.content>h1{
+    letter-spacing: 2px;
+    padding: 1rem 0;
+}
+.search{
+    width: 50%;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    min-width: 18rem;
+    border: none;
+}
+.search-top{
+    color: black;
+    width: 100%;
+    padding: 0 auto;
+    min-width: 5rem;
+
+}
+.search-option{
+    /* border: 2px solid red; */
+   width: 25rem;
+   max-width: 25rem;
+   display: hidden;
+}
+.search-width-high{
+    width: 100%;
+}
+
+
+
+
+
+
+/* tablet */
+@media screen and (max-width:950px)  {
+    nav{
+        background-color: var(--blue-color);
+    }
+    .nav-center{
+        padding: 5px 1rem;
+      background-color: var(--blue-color);
+    }
+    .links{
+        display: none;
+    }
+    .signin-small-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .signin-small-btn>h4{
+        margin: 0 1rem;
+    }
+    .signin-small-btn>button{
+        padding: 3px 9px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.3rem;
+    }
+    .content{
+        font-size: 0.8rem;
+    }
+    .search-option{
+        display: none;
+    }
+    
+}
+
+
+/* small screen */
+@media  screen and (max-width:525px)  {
+    
+
+}
+
+
