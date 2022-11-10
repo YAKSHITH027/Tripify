@@ -10,14 +10,14 @@
     --blue-color:#2f9bdb;
     --color-primary: #f27669;
     --color-primary-dark: #007f67;
-    --color-secondary: #252c6a;
-   
+    --color-link: #39418a;
     --color-error: #cc3333;
     --color-success: #4bb544;
     --border-radius: 4px;
+    --trasition : all 0.3s linear;
 }
 body{
-     /* background-color: rgb(138, 165, 165); */
+     background-color: rgb(255, 255, 255);
      color: black;
      height: 200vh;
 }
@@ -76,6 +76,13 @@ li>a{
     color: white;
     font-size: 1rem;
 }
+.links>li>button{
+    padding: 5px 1.1rem;
+    background-color: #2f3ca9;
+    border-radius: var(--border-radius);
+    color: white;
+    border: none;
+}
 .search-hide{
     width: 80%;
     margin: auto;
@@ -128,21 +135,28 @@ li>a{
 }
 
 .form-modal{
-    /* position: fixed;
-    top: 0; */
-    /* z-index: 100; */
+    position: fixed;
+    top: 0; 
+    left: 0;
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(104, 100, 108);
+    background-color: rgba(37, 40, 40, 0.553);
+    display: none;
+
+}
+.show-modal{
+    display: flex;
+    z-index: 10;
 }
 .form-container{
             width: 400px;
             max-width: 400px;
             margin: 1rem;
             padding: 2rem;
+            
             box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
             border-radius: var(--border-radius);
             background: #ffffff;
@@ -249,6 +263,12 @@ a{
     padding: 8px 0;
 }
 
+.sidebar{
+    display: none;
+    
+}
+
+
 /* tablet */
 @media screen and (max-width:950px)  {
     nav{
@@ -285,14 +305,196 @@ a{
     .search-hide{
         display: flex;
     }
+   .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background-color: #ffffff;
+    width: 320px;
+    height: 100vh;
+    padding: 1rem 0;
+    transform: translate(100%);
+    transition: all 0.3s linear ;
+    display: block;
+    /* padding-top: 4rem; */
+   }
+   .sidebar-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-bottom: 9px;
+}
+.sidebar-top>img{
+    width: 170px;
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+   }
+   .sidebar-top>.close-btn{
+    font-size: 2rem;
+    border: none;
+    color: rgb(3, 1, 1);
+    background-color: white;
+    background-color: transparent;
+    border: transparent;
+   }
+  .side-signin{
+    padding: 1px 9px;
+    background:transparent;
+    color: #2f3ca9;
+    /* margin-left: 0.4rem; */
+border: none;
+  }
+  .sidebar-middle{
+     padding: 1rem 5px;
+     /* border: 2px solid rebeccapurple; */
+     background-color: rgba(0, 0, 0, 0.057);
+  }
+  .sidebar-middle>div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.4rem;
+  }
+  .side-facebook,.side-google{
+    padding: 7px 2.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+  }
+  .side-facebook{
+    background-color: rgb(63, 63, 188);
+    color: white;
+
+  }
+  .side-google{
+    background-color: #d1611b;
+    color: white;
+  }
+  .sidebar-bottom{
+     margin-top: 1rem;
+  }
+  .sidebar-bottom>li{
+    padding: 7px;
     
-    
+  }
+  .sidebar-bottom>li>a{
+    color: black;
+    font-weight: 600;
+  }
+  .sidebar-bottom>li>a:hover{
+    color: var(--color-link) ;
+  }
+  .show-sidebar{
+    transform: translate(0);
+    z-index: 6;
+    display: block;
+    transition: all 0.3s ease-in;
+  }
 }
 
 /* small screen */
-@media  screen and (max-width:525px)  {
+/* @media  screen and (max-width:525px)  {
     
+} */
+
+
+/*  css for main container */
+
+.main-container{
+    width: 80%;
+    min-height: 100vh;
+    background-color: white;
+    margin: auto;
+}
+
+.small-card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 3rem 0;
+    gap: 0 1rem;
+}
+.small-card>div>img{
+    width: 90%;
+}
+/* spotlight */
+.spotlight-top{
+    width: 100%;
+    background-color: #cc3333;
 
 }
+.spotlight-cards{
+    display: grid;
+    width: 98%;
+    margin: auto;
+    gap: 0 1rem;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+    
+}
+
+.spotlight-cards>div>img{
+    width: 100%;
+    height: 170px;
+}
+.slider-auto{
+    min-height: 20vh;
+    background-color: #362d72;
+}
+
+
+.best-places-cards,.rajastan-places-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1.5rem;
+font-size: 1.2rem;
+}
+.best-places-cards>div,
+.rajastan-places-cards>div {
+    padding: 1rem 0.3rem;
+    /* border: 2px solid darkblue; */
+    border-radius: 0.8rem;
+}
+.best-places-cards>div>img,
+.rajastan-places-cards>div>img {
+   width: 100%;
+   border-radius: 0.8rem;
+   height: 170px;
+   max-height: 170px;
+}
+span{
+    color: rgb(65, 65, 190);
+}
+.rajastan-places{
+    min-height: 20vh;
+    /* background-color: #643e5c; */
+}
+.rajastan-banner>img{
+    width: 100%;
+    border-radius: 1rem;
+    min-height: 36vh;
+}
+.indonesia-places{
+    min-height: 20vh;
+    background-color: #3e6460;
+}
+.tripto-plan{
+    min-height: 20vh;
+    background-color: #57643e;
+}
+.creator-section{
+    min-height: 20vh;
+    background-color: #1b8b8d;
+}
+.footer-end{
+    min-height: 20vh;
+    background-color: #5d1c1c;
+}
+/* img{
+    width: 200px;
+    height: 160px;
+} */
+
 
 

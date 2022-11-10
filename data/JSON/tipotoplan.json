@@ -1,0 +1,58 @@
+[
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660666126_image_covera.jpg",
+        "package":"package",
+        "desc":"explore auroville like a local on a bicycle as you stay on a rustic farm beyond commnunity",
+        "place":"auroville",
+        "price":"6000"
+    },
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660316705_image_cover_1.jpg",
+        "package":"package",
+        "desc":"explore hidden trails to bicycle as you stay on a rustic farm beyond commnunity",
+        "place":"himachal pradesh",
+        "price":"7000"
+    },
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2163002/Image/1638778652_image_cover_b.jpg",
+        "package":"package",
+        "desc":"learn to cook a traditional rajasthani meala t a 200 year old luxury haveli",
+        "place":"udupi",
+        "price":"9000"
+    },
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1653391344_ln_c1.jpg",
+        "package":"package",
+        "desc":"expore an artist's estate and stay in akathkuni home diden in forsts north",
+        "place":"manglore",
+        "price":"9550"
+    },
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2163002/Image/1638778652_image_cover_b.jpg",
+        "package":"package",
+        "desc":"learn to cook a traditional rajasthani meala t a 200 year old luxury haveli",
+        "place":"udupi",
+        "price":"9000"
+    },
+     {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660316705_image_cover_1.jpg",
+        "package":"package",
+        "desc":"explore hidden trails to bicycle as you stay on a rustic farm beyond commnunity",
+        "place":"himachal pradesh",
+        "price":"7000"
+    },
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660666126_image_covera.jpg",
+        "package":"package",
+        "desc":"explore auroville like a local on a bicycle as you stay on a rustic farm beyond commnunity",
+        "place":"auroville",
+        "price":"6000"
+    },
+    {
+        "img":"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660316705_image_cover_1.jpg",
+        "package":"package",
+        "desc":"explore hidden trails to bicycle as you stay on a rustic farm beyond commnunity",
+        "place":"himachal pradesh",
+        "price":"7000"
+    }
+]
