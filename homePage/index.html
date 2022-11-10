@@ -11,7 +11,7 @@
       src="https://kit.fontawesome.com/4950a0320b.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Tripify : travel anywhere</title>
   </head>
   <body>
     <main class="banner">
@@ -34,12 +34,12 @@
               <li><a href="#">forum</a></li>
               <li><a href="#">packeges</a></li>
               <li><a href="#">public trips</a></li>
-              <li><a href="#">sign in</a></li>
+              <li><button href="#" onclick="showSignin()">sign in</button></li>
             </ul>
 
             <div class="signin-small-btn">
               <h4>get app</h4>
-              <button><i class="fa-solid fa-bars"></i></button>
+              <button onclick="showsidebar()"><i class="fa-solid fa-bars"></i></button>
 
             </div>
           </div>
@@ -118,7 +118,97 @@
      </div>
      </div>
 
+     <!-- sidebar -->
+     <aside class="sidebar">
+      <div class="sidebar-top">
+        <img src="../data/loclaImage/logo.png" alt="tripify">
+        <button class="close-btn" onclick="closeSidebar()" ><i class="fas fa-times"></i></i></button>
+      </div>
+      <div class="sidebar-middle">
+        <button class="side-signin" onclick="showSignin()"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>sign in</button>
+        <div>
+          <button class="side-facebook">facebook</button>
+          <button class="side-google">google</button>
+        </div>
+      </div>
 
+        <ul class="sidebar-bottom">
+           <li><a href="#">forum</a></li>
+           <li><a href="#">book packges</a></li>
+           <li><a href="#">upload photos/videos</a></li>
+           <li><a href="#">import blog</a></li>
+         </ul>
+     </aside>
+
+     <!-- -------------------------------------------------------------------- -->
+                           <!-- content page -->
+
+    <div class="main-container">
+        <section class="small-card">
+          <div><img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192329_aa.png" alt="place"></div>
+          <div><img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192307_cc.png" alt="place"></div>
+          <div><img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192273_bb.png" alt="place"></div>
+          <div><img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192344_dd.png" alt="place"></div>
+        </section>
+
+        <!-- spotlight section -->
+
+        <section class="spotlight-top">
+         <h1>In the Spotlight: Partnerships</h1>
+         <div class="spotlight-cards">
+
+         </div>
+        </section>
+        <!--end spotlight section -->
+
+        <!-- start of infinite slider -->
+        <section class="slider-auto">
+
+        </section>
+        <!-- end of infinite slider -->
+
+        <!-- best places section -->
+        <section class="best-places">
+         <h1>
+Find Best Places to Visit in India in November & December</h1>
+<div class="best-places-cards">
+
+</div>
+        </section>
+        <!-- end places section -->
+
+        <!-- rajastan banner -->
+        <section class="rajastan-places">
+          <div class="rajastan-banner">
+            <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1666956480_rajasthan_1.jpg" alt="rajastan">
+          </div>
+          <div class="rajastan-places-cards"></div>
+        </section>
+        <!-- end of rajastan banner -->
+        <!-- indonesia banner -->
+        <section class="indonesia-places">
+          <div class="indonesia-banner"></div>
+          <div class="places-cards"></div>
+        </section>
+        <!-- end of indonesia banner -->
+        <!-- start of tritoplan -->
+        <section class="tripto-plan">
+         <h1>Travel and Learn with Tripoto's Mindful Retreats</h1>
+         <div class="tripto-plan-cards"></div>
+        </section>
+        <!-- end of tritoplan -->
+        <!-- creator section -->
+        <section class="creator-section">
+          <h1>In the Spotlight: Tripoto Creators of the Month - October 2022</h1>
+          <p>Tripoto Family is a community of travel content creators who create stunning photo blogs, engaging reels and videos as well as informative articles. Here are the most promising creators of the month who showed us the colors of festivals through their content. Kudos to Tripoto's best creators for Oct 2022!</p>
+          <div class="creator-cards"></div>
+        </section>
+        <!-- end of creator section -->
+    </div>
+    <footer class="footer-end"></footer>
   </body>
   <script src="./index.js"></script>
+  <script>
+   
+  </script>
 </html>

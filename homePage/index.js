@@ -4,7 +4,7 @@ let header = document.querySelector(".header");
 let searchNav = document.querySelector(".search-option");
 let searchHide = document.querySelector(".search-hide");
 searchNav.style.display = "none";
-searchHide.style.display= "none"
+searchHide.style.display = "none";
 window.addEventListener("scroll", () => {
   let scrollHeight = window.pageYOffset;
   let navHeight = header.getBoundingClientRect().height;
@@ -81,3 +81,96 @@ function clearInputError(inputEle) {
   inputEle.classList.remove("form-input-error");
   inputEle.parentElement.querySelector(".input-message").textContent = "";
 }
+
+// sidebar
+
+const showsidebar = () => {
+  document.querySelector(".sidebar").classList.toggle("show-sidebar");
+};
+
+const closeSidebar = () => {
+  document.querySelector(".sidebar").classList.remove("show-sidebar");
+};
+
+// signup
+
+const showSignin = () => {
+  document.querySelector(".form-modal").classList.toggle("show-modal");
+  closeSidebar();
+};
+
+// sign up modal remover
+
+const signupContainer = document.querySelector(".form-container");
+document.querySelector(".form-modal").addEventListener("click", (e) => {
+  //  console.log(e.target);
+  if (e.target.closest(".form-container")) {
+    return;
+  }
+
+  document.querySelector(".form-modal").classList.remove("show-modal");
+});
+
+// json check
+
+let data = async () => {
+  let res = await fetch("../data/JSON/rajastan.json");
+  let data = await res.json();
+  console.log(data);
+};
+
+//  spotlight top-----------
+
+let spotlightData = async () => {
+  let res = await fetch("../data/JSON/spotlight1.json");
+  let data = await res.json();
+  console.log(data);
+  spoltlightDisplay(data);
+};
+spotlightData();
+const spoltlightDisplay = (data) => {
+  let spotlightCont = document.querySelector(".spotlight-cards");
+  data.forEach((item, index) => {
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = item.img;
+    let title = document.createElement("h4");
+    title.innerText = item.title;
+    let desc = document.createElement("p");
+    desc.innerText = item.desc;
+
+    div.append(img, title, desc);
+    spotlightCont.append(div);
+  });
+};
+
+//  all in 1 make it
+
+const mapData = (data, appendName, isName) => {
+  let container = document.querySelector(`.${appendName}`);
+  data.forEach((item, index) => {
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = item.img;
+    let desc = document.createElement("p");
+    desc.innerText = item.desc;
+    if (isName) {
+      let title = document.createElement("h4");
+      title.innerHTML = `by <span>${item.name}</span>`;
+      div.append(img, desc, title);
+    } else {
+      div.append(img, desc);
+    }
+    container.append(div);
+  });
+};
+
+let fetchData = async (url, appendName, isName) => {
+  let res = await fetch(url);
+  let data = await res.json();
+
+  mapData(data, appendName, isName);
+};
+
+fetchData("../data/JSON/bestplaces.json", "best-places-cards", true);
+fetchData("../data/JSON/rajastan.json", "rajastan-places-cards", false);
