@@ -60,11 +60,65 @@
               placeholder="Search for itineraries, destinations, hotels or activities"
               class="search"
             />
-            
-          
         </form>
       </div>
     </main>
+
+    <!-- form validator -->
+    <div class="form-modal">
+     <div class="form-container">
+      <form class="form" id="login">
+         <button class="form-btn faceb"><i class="fa-brands fa-facebook-f"></i>login with facebook</button>
+         <button class="form-btn googleg"><i class="fa-brands fa-google"></i>login with google</button>
+       <div class="form-top-msg"></div>
+         <div class="single-input">
+          <input type="text" class="form-input" autofocus placeholder="username or email">
+          <div class="input-message"></div>
+         </div>
+         <div class="single-input">
+          <input type="password" class="form-input" placeholder="password">
+          <div class="input-message"></div>
+         </div>
+         <div class="forgot">
+         <div>
+           <input type="checkbox" name="remember" id="remember"><label for="remember">remember me</label>
+         </div>
+            <p class="form-text"><a href="#">forgot password?</a></p>
+         </div>
+         <button type="submit" class="form-btn">log in</button>
+         <p class="form-text " >don't have an account? <a href="#" id="linkCreateAccount" >sign up</a></p>
+      </form>
+
+      <!-- create account -->
+
+      <form class="form form-hidden" id="createAccount">
+         <button class="form-btn faceb"><i class="fa-brands fa-facebook-f"></i>signup with facebook</button>
+         <button class="form-btn googleg"><i class="fa-brands fa-google"></i>signup with google</button>
+       <div class="form-top-msg"></div>
+         <div class="single-input">
+          <input type="text" class="form-input" autofocus id="userNameCreate" placeholder="username">
+          <div class="input-message"></div>
+         </div>
+         <div class="single-input">
+          <input type="email" class="form-input" placeholder="email">
+          <div class="input-message"></div>
+         </div>
+         <div class="single-input">
+          <input type="password" class="form-input" placeholder="password">
+          <div class="input-message"></div>
+         </div>
+         <div class="single-input">
+          <input type="number" class="form-input" placeholder="number">
+          <div class="input-message"></div>
+         </div>
+         <button type="submit" class="form-btn">sign up</button>
+         <p class="small-msg">By signing up, you agree to Tripoto's terms and conditions and privacy policy.</p>
+         <p class="form-text " id="CreateAccount">already registered? <a href="#" id="linkLogin" >log in</a></p>
+      </form>
+     </div>
+     </div>
+
+
   </body>
   <script src="./index.js"></script>
 </html>
