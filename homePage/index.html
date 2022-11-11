@@ -25,7 +25,7 @@
               <input
                 type="text"
                 placeholder="Search for itineraries, destinations, hotels or activities"
-                class="search search-top"
+                class="search search-top searchab"
               />
             </div>
 
@@ -47,19 +47,23 @@
               <input
               type="text"
               placeholder="Search for itineraries, destinations, hotels or activities"
-              class="search search-width-high"
+              class="search search-width-high searchab"
               />
             </div>
          </div>
         </nav>
       <div class="content">
         <h1>India's Largest Community of Travellers</h1>
-
+          <div id="search-full">
             <input
               type="text"
               placeholder="Search for itineraries, destinations, hotels or activities"
               class="search"
             />
+            <div id="searchab">
+              <i class="fa-sharp fa-solid fa-magnifying-glass " ></i>
+            </div>
+          </div>
         </form>
       </div>
     </main>
@@ -158,12 +162,25 @@
          <div class="spotlight-cards">
 
          </div>
+         <div class="control-btn">
+          <button class="prev-btn" onclick="prevbtns()">  <i class="fa-solid fa-angle-left"></i></button>
+        <button class="next-btn" onclick="nextbtns()">     <i class="fa-solid fa-angle-right"></i></button>
+     
+         </div>
         </section>
         <!--end spotlight section -->
 
         <!-- start of infinite slider -->
         <section class="slider-auto">
-
+           <div class="slides">
+             <div class="slide">
+               <img src="https://cdn1.tripoto.com/media/transfer/img/2224454/Image/1665126895_67098315_6056_4dc2_976b_45c23888b05f.gif" alt="">
+             </div>
+            <div class="slide">
+              <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/30751/Image/1665394736_homepage_banner_singapore_copy.jpg" alt="">
+            </div>
+            
+           </div>
         </section>
         <!-- end of infinite slider -->
 
@@ -186,16 +203,13 @@
         <!-- end of rajastan banner -->
         <!-- indonesia banner -->
         <section class="indonesia-places">
-          <div class="indonesia-banner"></div>
-          <div class="places-cards"></div>
+          <div class="indonesia-banner">
+            <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1666956495_indonesia_1.jpg" alt="indo">
+          </div>
+          <div class="indo-places-cards"></div>
         </section>
         <!-- end of indonesia banner -->
-        <!-- start of tritoplan -->
-        <section class="tripto-plan">
-         <h1>Travel and Learn with Tripoto's Mindful Retreats</h1>
-         <div class="tripto-plan-cards"></div>
-        </section>
-        <!-- end of tritoplan -->
+       
         <!-- creator section -->
         <section class="creator-section">
           <h1>In the Spotlight: Tripoto Creators of the Month - October 2022</h1>
@@ -204,7 +218,81 @@
         </section>
         <!-- end of creator section -->
     </div>
-    <footer class="footer-end"></footer>
+    <footer class="footer-end">
+      <div class="footer-container">
+        <div class="logo-icons">
+          <img src="../data/loclaImage/logo.png" alt="tripify">
+          <p>india's largest travel community</p>
+          <div class="icons">
+          <a href="#"> <i class="fa-brands fa-square-facebook"></i></a>          
+          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>          
+          <a href="#"> <i class="fa-brands fa-instagram"></i></a>          
+          <a href="#"> <i class="fa-brands fa-youtube"></i></a>          
+          <a href="#"> <i class="fa-brands fa-pinterest"></i></a>          
+          <a href="#"> <i class="fa-solid fa-wifi"></i></a>          
+          </div>
+          <img src="https://cdn1.tripoto.com/assets/2.9/img/logo/download-android-app.svg" alt="googlestore">
+        </div>
+        <div class="about-tripto">
+          <h3>about tripoto</h3>
+          <div class="about-cont">
+            <a href="#">how it works</a>
+            <a href="#">FAQ'S</a>
+            <a href="#">privacy policy</a>
+            <a href="#">terms & conditions</a>
+            <a href="#">careers</a>
+            <a href="#">contact us</a>
+          </div>
+        </div>
+        <div class="product-tripto">
+          <h3>product </h3>
+          <div class="product-cont">
+            <a href="#">tour packges</a>
+            <a href="#">travel guides</a>
+            <a href="#">trips & itineraries</a>
+            <a href="#">weekend getaways</a>
+            <a href="#">places to visit</a>
+            <a href="#">other travel categories</a>
+            <a href="#">tripoto forum</a>
+            <a href="#">honeymoon packages</a>
+          </div>
+        </div>
+        <div class="img-tripto">
+          <h3>img tripoto</h3>
+          <div class="img-cont">
+            <a href="#">goa tourism</a>
+            <a href="#">dubai tourism</a>
+            <a href="#">privacy policy</a>
+            <a href="#">keral tourism</a>
+            <a href="#">manali tourism</a>
+            <a href="#">bali tourism</a>
+            <a href="#">sri lanka tourism</a>
+            <a href="#">honeymoon destinations in india</a>
+          </div>
+        </div>
+        <div class="partner-tripto">
+          <h3>partner tripoto</h3>
+          <div class="partner-cont">
+            <a href="#">buy travel leads</a>
+            <a href="#">partner with us</a>
+            <a href="#">earn credits</a>
+            <a href="#">get paid to travel</a>
+            <a href="#">import blog to travel</a>
+            <a href="#">import blog to litinery</a>
+          </div>
+        </div>
+      </div>
+      <p>&copy;all rights reserved</p>
+    </footer>
+    <div class="relative">
+      <div class="nav-end">
+        <div class="home"><i class="fa-solid fa-house-chimney"></i>home</div>
+        <div class="explore"><i class="fa-solid fa-magnifying-glass"></i>explre</div>
+        <div class="plus"><i class="fa-regular fa-plus"></i></div>
+        <div class="bag"><i class="fa-solid fa-briefcase"></i>packges</div>
+        <div class="mic"><i class="fa-solid fa-volume-low"></i>forum</div>
+      </div>
+    </div>
   </body>
   <script src="./index.js"></script>
   <script>
