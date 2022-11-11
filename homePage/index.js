@@ -150,16 +150,20 @@ const mapData = (data, appendName, isName) => {
   let container = document.querySelector(`.${appendName}`);
   data.forEach((item, index) => {
     let div = document.createElement("div");
+    let div2 = document.createElement("div");
     let img = document.createElement("img");
     img.src = item.img;
     let desc = document.createElement("p");
     desc.innerText = item.desc;
-    if (isName) {
+    div2.append(img);
+    if (isName == "creator") {
+      div.append(div2);
+    } else if (isName) {
       let title = document.createElement("h4");
       title.innerHTML = `by <span>${item.name}</span>`;
-      div.append(img, desc, title);
+      div.append(div2, desc, title);
     } else {
-      div.append(img, desc);
+      div.append(div2, desc);
     }
     container.append(div);
   });
@@ -174,3 +178,4 @@ let fetchData = async (url, appendName, isName) => {
 
 fetchData("../data/JSON/bestplaces.json", "best-places-cards", true);
 fetchData("../data/JSON/rajastan.json", "rajastan-places-cards", false);
+fetchData("../data/JSON/creators.json", "creator-cards", "creator");
