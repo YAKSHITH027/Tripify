@@ -43,7 +43,9 @@ document.querySelector("#linkLogin").addEventListener("click", (e) => {
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let getuser = JSON.parse(localStorage.getItem("allUser")) || [];
+  let getuser = JSON.parse(localStorage.getItem("allUser")) || [
+    { userName: "yakshith027@gmail.com", userPassword: 1 },
+  ];
   const userEmail = loginForm.userNameLogin.value;
   const userPassword = loginForm.userPasswordLogin.value;
   console.log(userEmail, userPassword, getuser);
@@ -74,42 +76,16 @@ createAccountForm.addEventListener("submit", (e) => {
   const userEmail = createAccountForm.createEmail.value;
   const userPassword = createAccountForm.password.value;
   const userNumber = createAccountForm.password.value;
-  
-  const checkUser = allUser.find((item)=>{
-      if(item.userEmail==userEmail){
-        return item;
-      }
-  })
-  
-  if (!checkUser) {
-    
-    
-    let collect = {
-      userName,
-      userEmail,
-      userPassword,
-      userNumber,
-    };
-    allUser.push(collect);
-    localStorage.setItem("presentUser", JSON.stringify([collect]));
-    localStorage.setItem("allUser", JSON.stringify(allUser));
-
-    window.location.href = "../signinhome/home.html";
-  } else {
-    console.log("error");
-    setAlert(createAccountForm, "form-message-error", "Email is already registered");
-  }
-  
-
+  let collect = {
+    userName,
+    userEmail,
+    userPassword,
+    userNumber,
+  };
+  allUser.push(collect);
+  localStorage.setItem("presentUser", JSON.stringify([collect]));
+  localStorage.setItem("allUser", JSON.stringify(allUser));
 });
-function check(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] == "@") {
-      return false;
-    }
-  }
-  return true;
-}
 
 document.querySelectorAll(".form-input").forEach((ele) => {
   // console.log("hello");
@@ -123,22 +99,24 @@ document.querySelectorAll(".form-input").forEach((ele) => {
     ) {
       showInputError(ele, "Name cannot be less than 5 character");
     }
+    if (
+      e.target.id == "createEmail" &&
+      e.target.value.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+    ) {
+      // showInputError(ele, "invalid email id");
+    }
 
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-
-  if (e.target.id == "createEmail" && check(e.target.value)) {
-    showInputError(ele, "invalid email id");
-  }
     if (
       e.target.id == "password" &&
       e.target.value.length < 8 &&
       e.target.value.length > 0
     ) {
-      showInputError(ele, "password shold be atleast 8 character");
+      showInputError(ele, "weak password");
     }
     if (e.target.id == "number" && e.target.value.length != 10) {
-      showInputError(ele, "mobile number should be of 10 numbers");
+      showInputError(ele, "invalid moblile number");
     }
   });
   ele.addEventListener("input", () => {
@@ -360,3 +338,8 @@ function slider4() {
   }
 }
 slider4();
+const getUserFirst = JSON.parse(localStorage.getItem("presentUser"))
+const userFirst = document.querySelector('.userF');
+let firstLetter = getUserFirst[0].userName[0];
+console.log(firstLetter)
+userFirst.innerText=firstLetter
