@@ -170,13 +170,6 @@ document.querySelector(".form-modal").addEventListener("click", (e) => {
   document.querySelector(".form-modal").classList.remove("show-modal");
 });
 
-// json check
-
-// let data = async () => {
-//   let res = await fetch("../data/JSON/rajastan.json");
-//   let data = await res.json();
-//   console.log(data);
-// };
 
 //  spotlight top-----------
 let valueLength;
@@ -241,65 +234,22 @@ fetchData("../data/JSON/rajastan.json", "rajastan-places-cards", false);
 fetchData("../data/JSON/creators.json", "creator-cards", "creator");
 fetchData("../data/JSON/indo.json", "indo-places-cards", false);
 
-// auto slide section---------
-document.addEventListener("DOMContentLoaded", () => {
-  const slideContainer = document.querySelector(".slider-auto");
-  const slidesHolder = document.querySelector(".slides");
 
-  let slides = document.querySelectorAll(".slide");
-  // console.log(slide)
-  let slideIndex = 1;
+const slidesHolder = document.querySelector(".slides");
 
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[slides.length - 1].cloneNode(true);
-
-  firstClone.id = "first-clone";
-  lastClone.id = "last-clone";
-
-  slidesHolder.append(firstClone);
-  slidesHolder.prepend(lastClone);
-
-  // console.log(slideWidth);
-  slidesHolder.style.transform = `translateX(${-100}%)`;
-  let intervalboy;
-  const startSlide = () => {
-    intervalboy = setInterval(() => {
-      let slideWidth = slidesHolder.getBoundingClientRect().width;
-      slideIndex++;
-      slidesHolder.style.transform = `translateX(${
-        -slideWidth * slideIndex
-      }px)`;
-      slidesHolder.style.transition = "0.4s";
-    }, 2000);
-    // document.addEventListener("visibilitychange", () => {
-    //   clearInterval(intervalboy);
-    // });
-    // user leaves the tab
-  };
-  slidesHolder.addEventListener("transitionend", () => {
-    slides = document.querySelectorAll(".slide");
-
-    // console.log(slides)
-    // console.log(slides[slideIndex].id,firstClone.id);
-    if (slides[slideIndex].id == firstClone.id) {
-      slidesHolder.style.transition = "none";
-      slideIndex = 1;
-      let slideWidth = slidesHolder.getBoundingClientRect().width;
-      slidesHolder.style.transform = `translateX(${
-        -slideWidth * slideIndex
-      }px)`;
-    }
-  });
-  startSlide();
-
-  window.addEventListener("blur", (e) => {
-    // your custom code here
-    clearInterval(intervalboy);
-  });
-  // user enters the tab (again)
-  window.addEventListener("focus", (e) => {
-    // your custom code here
-    startSlide();
+const slides = document.querySelectorAll(".slide");
+setInterval(() => {
+  slidesHolder.style.transform = "translate(-100%)";
+  slidesHolder.style.transition = "all 0.5s";
+  // console.log('hey there')
+}, 2000);
+slidesHolder.addEventListener("transitionend", () => {
+  slidesHolder.appendChild(slidesHolder.firstElementChild);
+  // console.log("hello");
+  slidesHolder.style.transition = "none";
+  slidesHolder.style.transform = "translate(0)";
+  setTimeout(function () {
+    slidesHolder.style.transition = "all 0.5s";
   });
 });
 
@@ -340,6 +290,17 @@ function slider4() {
 slider4();
 const getUserFirst = JSON.parse(localStorage.getItem("presentUser"))
 const userFirst = document.querySelector('.userF');
+const userFirstg = document.querySelector('.userG');
 let firstLetter = getUserFirst[0].userName[0];
-console.log(firstLetter)
+// console.log(firstLetter)
+
 userFirst.innerText=firstLetter
+userFirstg.innerText=firstLetter
+const showUser = document.querySelector('.showUser');
+showUser.innerText=getUserFirst[0].userName;
+
+function logout(){
+  console.log('hello')
+  
+ window.location.href = "../homePage/index.html";
+}

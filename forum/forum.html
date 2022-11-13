@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>forum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/4950a0320b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./forum.css" />
   </head>
   <body>
@@ -12,7 +17,11 @@
       <div class="header">
         <div class="nav-center">
           <div class="logo">
-            <img src="../data/loclaImage/logo.png" alt="tripify" />
+            <a href="../signinhome/home.html">
+
+              <img src="../data/loclaImage/logo.png" alt="tripify" />
+            </a>
+
           </div>
           <div class="search-option">
             <input
@@ -55,8 +64,7 @@
             </li>
             <li class="listitem">
               <button>
-                <i class="fa-sharp fa-solid fa-bars"></i
-                ><span class="userF"></span>
+              <i class="fa-sharp fa-solid fa-bars"></i><span class="userF"></span>
               </button>
               <ul>
                 <li>username</li>
@@ -79,8 +87,36 @@
       </div>
     </nav>
     <div class="mainSecond">
-      <section class="scroller"></section>
-      <section class="questions"></section>
+      <section class="scroller">
+        <div class="heading">
+       <i class="fa-sharp fa-solid fa-seal-question"></i>
+          <h2>travel forum</h2>
+          <p>get answer and questions from real tripify users</p>
+        </div>
+        <div class="fix">
+          <textarea
+            name="text"
+            id="user-q"
+            cols="100"
+            rows="10"
+            placeholder="post your question"
+          ></textarea>
+          <button class="" onclick="postq()">post</button>
+        </div>
+        <div class="searchforum">
+          <input type="text" placeholder="search question" oninput="search()" class="search searchf" />
+        </div>
+        <div class="all-questionandanswer changes"></div>
+      </section>
+      <section class="questions">
+        <div class="title">
+          <h1>unanswered questions for you</h1>
+          <p>earn credits when you answers upvoted by others</p>
+        </div>
+          <div class="unanswered">
+
+          </div>
+      </section>
     </div>
   </body>
   <script src="./forum.js"></script>
