@@ -302,5 +302,5 @@ showUser.innerText=getUserFirst[0].userName;
 function logout(){
   console.log('hello')
   
- window.location.href = "../homePage/index.html";
+ window.location.href = "../index.html";
 }

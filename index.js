@@ -62,7 +62,7 @@ loginForm.addEventListener("submit", (e) => {
     console.log(presentCheck);
     localStorage.setItem("presentUser", JSON.stringify([presentCheck]));
 
-    window.location.href = "../signinhome/home.html";
+    window.location.href = "./signinhome/home.html";
   } else {
     console.log("error");
     setAlert(loginForm, "form-message-error", "invalid username/password");
@@ -98,7 +98,7 @@ createAccountForm.addEventListener("submit", (e) => {
     localStorage.setItem("presentUser", JSON.stringify([collect]));
     localStorage.setItem("allUser", JSON.stringify(allUser));
 
-    window.location.href = "../signinhome/home.html";
+    window.location.href = "./signinhome/home.html";
   } else {
     console.log("error");
     setAlert(createAccountForm, "form-message-error", "Email is already registered");
@@ -201,7 +201,7 @@ document.querySelector(".form-modal").addEventListener("click", (e) => {
 //  spotlight top-----------
 let valueLength;
 let spotlightData = async () => {
-  let res = await fetch("../data/JSON/spotlight1.json");
+  let res = await fetch("./data/JSON/spotlight1.json");
   let data = await res.json();
 
   valueLength = data.length;
@@ -256,10 +256,10 @@ let fetchData = async (url, appendName, isName) => {
   mapData(data, appendName, isName);
 };
 
-fetchData("../data/JSON/bestplaces.json", "best-places-cards", true);
-fetchData("../data/JSON/rajastan.json", "rajastan-places-cards", false);
-fetchData("../data/JSON/creators.json", "creator-cards", "creator");
-fetchData("../data/JSON/indo.json", "indo-places-cards", false);
+fetchData("./data/JSON/bestplaces.json", "best-places-cards", true);
+fetchData("./data/JSON/rajastan.json", "rajastan-places-cards", false);
+fetchData("./data/JSON/creators.json", "creator-cards", "creator");
+fetchData("./data/JSON/indo.json", "indo-places-cards", false);
 
 // auto slider
 
