@@ -42,7 +42,7 @@ body{
 }
 
 .banner{
-    background: url('../data/loclaImage/home_banner_road.jpg');
+    background: url('./data/loclaImage/home_banner_road.jpg');
     min-height: 340px;
 }
 .logo{
