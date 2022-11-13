@@ -23,17 +23,11 @@ body{
      height: 200vh;
 }
 
-/* navbar */
-/* nav{
-    position: fixed;
-} */
-
 .nav-center{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 2rem;
-    /* border: 2px solid rebeccapurple; */
     color: white;
     height: 55px;
     font-family: 'Roboto Mono', monospace;
@@ -52,7 +46,6 @@ body{
     min-height: 340px;
 }
 .logo{
-      /* border: 2px solid darkblue; */
       width: 150px !important;
       padding: 5px 0;
       margin-right: 2rem;
@@ -63,13 +56,13 @@ body{
 }
 .links{
     display: flex;
-    /* width: 50rem; */
-    /* border: 2px solid red; */
     justify-content: space-around;
+    cursor: pointer;
 }
 li{
     list-style: none;
     margin: 0 1rem;
+    cursor: pointer;
 }
 li>a{
     text-decoration: none;
@@ -122,6 +115,7 @@ li>a{
     margin: 0;
     padding: 4px 8px;
     border-radius: 3px;
+    transition: all 0.2s ease;
     height: 100%;
 }
 .listitem ul>li:hover,.listitem2 ul>li:hover{
@@ -154,10 +148,6 @@ li>a{
     margin-bottom: 5px;
     display: none;
 }
-
-/* .search-top{
-    width: 25rem;
-} */
 .signin-small-btn{
     display: none;
 }
@@ -193,8 +183,6 @@ li>a{
 
 }
 .search-option{
-    /* border: 2px solid red; */
-    /* background-color: #007f67; */
    width: 25rem;
    max-width: 25rem;
    display: hidden;
@@ -259,7 +247,7 @@ li>a{
     border-radius: var(--border-radius);
     background-color: #eeeeee;
     border: 1px solid #dddddd;
-        text-transform: none;
+    text-transform: none;
 }
 .form-input:focus {
     border-color: var(--color-primary);
@@ -286,7 +274,7 @@ li>a{
         outline: none;
         cursor: pointer;
         background: var(--color-primary);
-}
+      }
 .faceb{
     color: white;
     background-color: #2f3ca9;
@@ -340,7 +328,8 @@ a{
 }
 
 
-/* tablet */
+/* medium screen */
+
 @media screen and (max-width:950px)  {
     nav{
         background-color: var(--blue-color);
@@ -465,11 +454,6 @@ border: none;
   }
 }
 
-/* small screen */
-/* @media  screen and (max-width:525px)  {
-    
-} */
-
 
 /*  css for main container */
 
@@ -510,6 +494,12 @@ border: none;
 .spotlight-cards>div{
     min-width: 25%;
     padding: 1rem;
+    margin-bottom: 0.6rem;
+}
+.spotlight-cards>div:hover{
+    /* background-color: #007f67; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1rem;
 }
 
 .spotlight-cards>div>img{
@@ -549,8 +539,6 @@ border: none;
 .slides{
     height: 100%;
     display: flex;
-
-    /* border: 2px solid rgb(189, 28, 28); */
 }
 .slide{
     /* border: 2px solid rgb(24, 165, 33); */
@@ -577,12 +565,23 @@ border: none;
 font-size: 1rem;
 font-weight: 600;
 font-family: 'NuSansnito ', sans-serif;
+margin-bottom: 1rem;
 }
 .best-places-cards>div,
 .rajastan-places-cards>div,.indo-places-cards>div {
     padding: 1rem 0.3rem;
     /* border: 2px solid darkblue; */
     border-radius: 0.8rem;
+    transition: all 0.1s ease-in;
+    padding: 0.8rem 0.5rem;
+    /* padding-left: 2rem; */
+}
+.best-places-cards>div:hover,
+.rajastan-places-cards>div:hover,
+.indo-places-cards>div:hover{
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1rem;
+    padding: 0.2rem 0.3rem;
 }
 .best-places-cards>div>p{
    margin: 0.5rem 0;
@@ -623,10 +622,6 @@ span{
     min-height: 20vh;
     background-color: #57643e;
 }
-/* .creator-section{
-    min-height: 20vh;
-    background-color: #1b8b8d;
-} */
  .creator-cards{
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -736,6 +731,9 @@ span{
     .main-container{
         width: 90%;
     }
+        .content>h1{
+            letter-spacing: 1px;
+        }
     .small-card {
             grid-template-columns: repeat(2, 1fr);
             gap: 0 0.2rem;
@@ -753,6 +751,7 @@ span{
     .best-places-cards,.rajastan-places-cards,.indo-places-cards {
              grid-template-columns: repeat(2, 1fr);
              gap: 0.9rem;
+             font-size: 0.9rem;
         }
     .spotlight-cards{
         grid-template-columns: repeat(2,1fr);
@@ -809,22 +808,25 @@ span{
         }
 
         /* small screen */
-        @media screen and (max-width:525px) {
-            .main-container{
-                width: 97%;
-            }
-                        .spotlight-cards>div {
-                            min-width: 50%;
-                            padding: 0.5rem;
-                        }
-            .best-places-cards,.rajastan-places-cards,.indo-places-cards {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.3rem;
-            }
-            .best-places-cards>div>div>img, .rajastan-places-cards>div>div>img,.indo-places-cards>div>div>img{
-                  height: 100px;
-              }
-        }
+ @media screen and (max-width:525px) {
+     .main-container{
+         width: 97%;
+     }
+         #searchab{
+left:79% ;
+         }
+    .spotlight-cards>div {
+         min-width: 50%;
+        padding: 0.5rem;
+    }
+  .best-places-cards,.rajastan-places-cards,.indo-places-cards {
+     grid-template-columns: repeat(2, 1fr);     
+      gap: 0.3rem;
+     }
+ .best-places-cards>div>div>img, .rajastan-places-cards>div>div>img,.indo-places-cards>div>div>img{
+        height: 100px;
+       }
+    }
         
 
 

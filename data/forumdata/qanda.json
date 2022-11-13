@@ -1,0 +1,23 @@
+[
+    {
+        "qperson":"suresh",
+        "question":"how can i reach himachal in 1 hour?",
+        "time": "12-09-2022",
+        "aperson":"ramesh",
+        "answer":[{"name":"stark","personAnswer":"you may have to take express train"}]
+    },
+    {
+        "qperson":"mahesh",
+        "question":"how can i reach karnataka in 1 hour?",
+        "time": "12-09-2022",
+        "aperson":"ramesh",
+        "answer":[]
+    },
+    {
+        "qperson":"captain",
+        "question":"is ther any way to get there in 1 hour?",
+        "time": "12-09-2022",
+        "aperson":"ramesh",
+        "answer":[{"name":"stark","personAnswer":"you may have to take express train"},{"name":"sursh","personAnswer":" he there take some time you may have to take express train"}]
+    }
+]

@@ -22,8 +22,8 @@ i{
     background-color: #007f67;
 }
 body {
-    background-color: rgb(255, 255, 255);
-    color: black;
+    /* background: linear-gradient(rgb(31, 103, 122),rgba(28, 179, 56, 0.429)); */
+    color: rgb(0, 0, 0);
     /* height: 300vh; */
 }
 
@@ -51,7 +51,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 2;
-   
+   top: 0;
     transition: all 0.18s ease-in;
 }
 
@@ -67,7 +67,7 @@ body {
     margin-right: 2rem;
 }
 
-.logo>img {
+.logo>a>img {
     width: 140px;
     height: 3rem;
 }
@@ -86,7 +86,7 @@ li {
     display: flex;
     align-items: center;
 }
-.userF {
+.userF,.userG {
     color: white;
     background-color: #007f67;
     border-radius: 50%;
@@ -256,20 +256,145 @@ li>a {
     grid-template-columns: 2fr 1fr;
     width: 85%;
     margin: auto;
-    background-color: #191e18;
+    /* background-color: #9ba39a; */
+    margin-top: 5rem;
 }
 .scroller{
-    background-color: #007f67;
-    min-height: 100vh;
+    /* background-color: #65857f; */
+    height:80vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+   
+}
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+.heading{
+padding: 5px 0 1rem 0;
+
+}
+.heading>h2{
+    color: #088cd8;
+}
+.searchf{
+    border: 1px solid ;
+}
+.searchforum{
+    padding: 1rem 0;
+    color: black;
+    
+}
+.changes{
+    padding: 1rem;
+}
+.changes>div>h4{
+    font-size: 1.2rem;
+}
+.changes>div>h1{
+    padding: 0.3rem 0;
+}
+.hidePost{
+    display: none;
+}
+.hidePost>div{
+    text-align: end;
+}
+.changes>div{
+    margin: 2rem 0;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 10px 6px 12px 2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 1rem;
+}
+
+.appendAnswer{
+    padding-left: 1rem;
+    padding-top: 1rem;
+    color: #47514f;
+}
+.appendAnswer>div div{
+    padding: 0rem 1rem;
+    padding-top: 0.5rem;
+}
+.appendAnswer>div>h4{
+    font-size: 1rem;
+    padding: 5px 0;
+}
+.appendAnswer>div>p{
+    padding: 0 8px;
+}
+.showPost{
+    display: block;
 }
 .questions{
-    background-color: #2f3ca9;
-    min-height: 100vh;
+    /* background-color: #616587; */
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.title{
+    padding: 1rem 1rem;
+    background-color: #182c6b;
+    color: white;
+    border-radius: 1rem;
+
+}
+.unanswered>div{
+    padding: 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 1rem;
+    margin-bottom: 15px;
+}
+.unanswered>div>h2{
+    font-size: 1rem;
+    pad: 4px 0;
+}
+.unanswered>div>p{
+    font-size: 0.9rem;
+    padding: 0.3rem 0.7rem;
 }
 
+textarea{
+    resize: none;
+    width: 100%;
+    font-size: 2rem;
+    height: 140px;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+.scroller button{
+    color: white;
+    background-color: #2f3ca9;
+    padding: 5px 1rem;
+    border: none;
+    border-radius: 5px;
+    margin:3px;
 
+}
+.fix{
+    width: 98%;
+    margin: auto;
+}
+i{background-color: transparent;}
+
+.unanswered{
+    padding: 2rem 0.5rem;
+}
 
 @media screen and (max-width:950px) {
+
+    .mainSecond {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 85%;
+            margin: auto;
+            /* background-color: #9ba39a; */
+            margin-top: 5rem;
+        }
+        .questions{
+            display: none;
+        }
     nav {
         background-color: var(--blue-color);
     }
@@ -300,7 +425,7 @@ li>a {
         color: white;
         font-size: 1.3rem;
     }
-
+    
     .content {
         font-size: 0.8rem;
     }
@@ -327,7 +452,7 @@ li>a {
         display: block;
         /* padding-top: 4rem; */
     }
-
+   .search-hide{display: none;}
     .sidebar-top {
         display: flex;
         justify-content: space-between;
@@ -416,3 +541,7 @@ li>a {
         transition: all 0.3s ease-in;
     }
 }
+
+
+
+/* forum */

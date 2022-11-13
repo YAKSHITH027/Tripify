@@ -23,11 +23,6 @@ body{
      height: 200vh;
 }
 
-/* navbar */
-/* nav{
-    position: fixed;
-} */
-
 .nav-center{
     display: flex;
     justify-content: space-between;
@@ -69,7 +64,7 @@ body{
     padding: 0.2rem 0;
     justify-content: space-around;
 }
-.userF {
+.userF,.userG {
     color: white;
     background-color: #007f67;
     border-radius: 50%;
@@ -80,6 +75,16 @@ body{
     /* border: 2px solid rgb(181, 34, 8); */
     padding: 0.3rem;
     margin-left: 1rem;
+}
+.showUser{
+    padding-left: 1rem;
+    color: black;
+}
+.logout{
+    color: black;
+}
+.showUser:hover{
+    color: white;
 }
 li{
     list-style: none;
@@ -128,7 +133,7 @@ li>a{
     list-style: none;
     border-radius: 5px;
     opacity: 0;
-    pointer-events: none;
+    /* pointer-events: none; */
     visibility: hidden;
     padding-bottom: 2rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px -40px 36px -28px inset;
@@ -159,6 +164,18 @@ li>a{
     visibility: visible;
     pointer-events: all;
 
+}
+.logout{
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    
+}
+.logout:hover{
+  /* background-color: black; */
+  color: white;
+  font-weight: 700;
 }
 
 .listitem li:hover{
